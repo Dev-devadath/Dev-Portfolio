@@ -9,7 +9,12 @@ export const metadata: Metadata = {
   title: "Devadath - Personal Portfolio",
   description: "I love crafting beautiful software for the internet.",
   icons: {
-    icon: "/favicon.ico",
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon.ico", type: "image/x-icon" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
   },
 };
 
@@ -26,4 +31,3 @@ export default function RootLayout({
     </html>
   );
 }
-
