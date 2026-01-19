@@ -3,8 +3,35 @@ import Image from "next/image";
 import { ThemeToggle } from "../components/ThemeToggle";
 import { fetchAllRepos } from "@/lib/github-api";
 import { RepoData } from "@/lib/github-repos";
+import type { Metadata } from "next";
 
 export const revalidate = 3600; // Revalidate every hour
+
+export const metadata: Metadata = {
+  title: "Projects",
+  description: "Explore my latest open source projects, AI experiments, robotic builds, and software products. Featured projects include Jarvis AI Humanoid Robot, WhaToEat, ChapterGenie, and more.",
+  keywords: ["Devadath Projects", "Open Source", "AI Projects", "Robotics Projects", "GitHub", "Software Development", "Machine Learning", "Computer Vision"],
+  openGraph: {
+    title: "Projects | Devadath",
+    description: "Explore my latest open source projects, AI experiments, robotic builds, and software products.",
+    url: "https://devadath.dev/projects",
+    type: "website",
+    images: [
+      {
+        url: "/avatar.jpg",
+        width: 800,
+        height: 600,
+        alt: "Devadath Projects",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Projects | Devadath",
+    description: "Explore my latest open source projects, AI experiments, robotic builds, and software products.",
+    images: ["/avatar.jpg"],
+  },
+};
 
 export default async function Projects() {
   let repos: RepoData[] = [];

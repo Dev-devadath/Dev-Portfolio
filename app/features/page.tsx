@@ -2,6 +2,33 @@ import Link from "next/link";
 import Image from "next/image";
 import { ThemeToggle } from "../components/ThemeToggle";
 import { featuredPosts, FeaturedPost } from "@/lib/linkedin-posts";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Features",
+  description: "Featured highlights, achievements, and notable moments from Devadath's journey. Including NASA Space Apps Challenge wins, product showcases, podcast interviews, and maker sessions.",
+  keywords: ["Devadath Features", "Achievements", "NASA Space Apps", "Innovation Festival", "Podcast", "Maker Sessions", "Awards", "Highlights"],
+  openGraph: {
+    title: "Features | Devadath",
+    description: "Featured highlights, achievements, and notable moments from my journey in AI, robotics, and software development.",
+    url: "https://devadath.dev/features",
+    type: "website",
+    images: [
+      {
+        url: "/avatar.jpg",
+        width: 800,
+        height: 600,
+        alt: "Devadath Features",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Features | Devadath",
+    description: "Featured highlights, achievements, and notable moments from my journey in AI, robotics, and software development.",
+    images: ["/avatar.jpg"],
+  },
+};
 
 export default function Features() {
   // Sort posts by id (ascending order)

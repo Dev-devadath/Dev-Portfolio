@@ -23,7 +23,7 @@ export const featuredPosts: FeaturedPost[] = [
     id: "2",
     title: "Podcast interview",
     content:
-      "An interview podcast with Sapience Edu Connect about Jarvis AI and my journey as a founder.",
+      "An interview podcast with Sapience Edu Connect about Jarvis AI and Devadath's journey as a founder.",
     date: "2025-08-23", // Will display as "Jan 2026"
     image: "/post2.jpg",
     url: "https://youtu.be/ztNDeMkRqog?si=vp7dadpG66GIffWY",

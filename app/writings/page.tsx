@@ -1,6 +1,33 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ThemeToggle } from "../components/ThemeToggle";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Writings",
+  description: "Thoughts on software engineering, artificial intelligence, robotics, startup culture, and building innovative products. Articles and insights from Devadath.",
+  keywords: ["Devadath Writings", "Tech Blog", "AI Articles", "Robotics Blog", "Software Engineering", "Startup Culture", "Tech Insights"],
+  openGraph: {
+    title: "Writings | Devadath",
+    description: "Thoughts on software engineering, artificial intelligence, robotics, and startup culture.",
+    url: "https://devadath.dev/writings",
+    type: "website",
+    images: [
+      {
+        url: "/avatar.jpg",
+        width: 800,
+        height: 600,
+        alt: "Devadath Writings",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Writings | Devadath",
+    description: "Thoughts on software engineering, artificial intelligence, robotics, and startup culture.",
+    images: ["/avatar.jpg"],
+  },
+};
 
 export default function Writings() {
   return (
