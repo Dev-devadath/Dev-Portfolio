@@ -36,8 +36,8 @@ body {
 }
 
 .avatar-position {
-  object-position: 70% 25%;
-  transform: scale(1.5);
+  object-position: 40% center;
+  transform: scale(3) translateY(-5px);
 }
 
 .line-clamp-2 {
