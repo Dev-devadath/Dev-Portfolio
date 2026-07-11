@@ -54,3 +54,63 @@ body {
   overflow: hidden;
 }
 
+/* ── Writings: teardown log ─────────────────────────────── */
+
+/* masking-tape highlighter sweep */
+.marker {
+  background: linear-gradient(
+    100deg,
+    transparent 0.5%,
+    rgba(255, 208, 60, 0.6) 3.5%,
+    rgba(255, 208, 60, 0.45) 96%,
+    transparent 99%
+  );
+  padding: 0.08em 0.22em;
+  margin: 0 -0.18em;
+  border-radius: 0.2em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+.dark .marker {
+  background: linear-gradient(
+    100deg,
+    transparent 0.5%,
+    rgba(255, 193, 40, 0.28) 3.5%,
+    rgba(255, 193, 40, 0.2) 96%,
+    transparent 99%
+  );
+}
+
+/* the word "curse", disassembled; hover the title to reassemble */
+.curse-letters span {
+  display: inline-block;
+  transition: transform 0.6s cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.curse-letters span:nth-child(1) {
+  transform: translate(-6px, 4px) rotate(-14deg);
+}
+.curse-letters span:nth-child(2) {
+  transform: translate(-2px, -9px) rotate(9deg);
+}
+.curse-letters span:nth-child(3) {
+  transform: translate(1px, 6px) rotate(-6deg);
+}
+.curse-letters span:nth-child(4) {
+  transform: translate(4px, -5px) rotate(16deg);
+}
+.curse-letters span:nth-child(5) {
+  transform: translate(9px, 3px) rotate(-10deg);
+}
+
+.teardown-title:hover .curse-letters span {
+  transform: translate(0, 0) rotate(0deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .curse-letters span {
+    transition: none;
+  }
+}
+

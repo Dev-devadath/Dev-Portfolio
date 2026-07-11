@@ -30,6 +30,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: 'monthly',
       priority: 0.7,
     },
+    {
+      url: `${baseUrl}/writings/my-gift-my-curse`,
+      lastModified: new Date('2026-07-10'),
+      changeFrequency: 'yearly',
+      priority: 0.7,
+    },
   ]
 
   // Try to fetch dynamic project pages (optional - only if you have individual project pages)
